@@ -1,0 +1,50 @@
+html, body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: lavender;
+    background-color: rgb(63,63,63);
+}
+
+div.content {
+    margin: auto;
+    width: 50%;
+    min-width: 300px;
+    max-width: 1000px;
+    padding: 20px;
+
+    background-color: rgb(53,53,53);
+    border: 1px solid lavender;
+    box-shadow: 0px 0px 10px lavender, 0px 0px 20px black inset;
+    border-radius: 10px;
+
+}
+
+a {
+    color:cornflowerblue;
+}
+
+a:hover {
+    color:deepskyblue;
+}
+
+a:active {
+    color:dodgerblue;
+}
+
+hr {
+    border-top: 1px solid grey;
+    border-bottom: 1px solid grey;
+    width: 50%;
+    min-width: 220px;
+    max-width: 500px;
+    margin-top: 2em;
+    margin-bottom: 2em;
+}
+
+header, h1, h2, h3, p {
+    text-align: center;
+}
+
+.header-text {
+    font-size: 3em;
+    font-weight: bold;
+}
