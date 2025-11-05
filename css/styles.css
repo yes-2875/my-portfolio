@@ -85,23 +85,20 @@ footer {
     
 }
 
-button {
-    cursor: pointer;
-}
-
 .extraDetails {
     overflow: hidden;
-    transition: max-height 0.5s ease-in-out;
-    max-height: auto;
+    transition: all 0.5s ease-in-out;
+    margin: 10px 0 !important;
+    max-height: calc-size(fit-content, size);
 }
 
 .extraDetails.hidden {
     margin: 0;
     max-height: 0 !important;
-    transition: max-height 0.5s ease-in-out;
+    transition: all 0.5s ease-in-out;
 }
 
-.showDetails {
+button {
     line-height: 1.5;
     background-color: rgb(43,43,43);
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -110,25 +107,37 @@ button {
     border: 1px solid silver;
     border-radius: 5px;
     padding: 3px 10px;
+    cursor:pointer;
+    
+    display: block; /*Actually allow the buttons to be centered properly*/
     margin: 0 auto !important;
     
     transition: all 0.1s ease-out;
 }
 
-.showDetails:hover {
+button:hover {
     font-weight: bold;
     background-color: rgb(63,63,63);
     border-width: 2px;
 }
 
-.projectContent * {
-    margin: 10px;
+button:active {
+    background-color: rgb(93, 93, 93);
+}
+
+button img {
+    height: 20px;
+    width: 30px;
+    position: relative;
+    top: 5px;
 }
 
 .projectImage {
     flex: 1 1 150px; /*Actually let the project cards expand instead of shrinking the image to oblivion. I guess I didn't understand flex well enough until now.*/
     border-radius: 10px;
     object-fit: cover;
+    display: block;
+    max-width: 100%;
     /*max-height: 150px;*/
 }
 
