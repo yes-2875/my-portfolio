@@ -104,17 +104,17 @@
                 <form>
                     <label for="name">Name<b>* </b>: </label>
                     <input type="text" id="name" name="name" placeholder="Enter your name" minlength=3 maxlength=20 required>
-                    <span class="error active">AA</span>
+                    <span class="error" id="nameError"></span>
                     
                     <label for="email">Email address<b>* </b>: </label>
                     <input type="email" id="email" name="email" minlength=8 maxlength= 32 placeholder="email@example.com" required>
-                    <span class="error"></span>
+                    <span class="error" id="emailError"></span>
                     
                     <label for="message">Your message<b>* </b>: </label>
-                    <textarea wrap="soft" id="message" name="message" placeholder="Write message here" required></textarea>
-                    <span class="error"></span>
+                    <textarea wrap="soft" id="message" name="message" placeholder="Write message here" required minlength=12 maxlength=7500></textarea>
+                    <span class="error" id="messageError"></span>
                     
-                    <br><input type="submit" value="Contact Me">
+                    <br><input type="submit" id="submit" value="Contact Me" disabled>
                 </form>
             </section>
             

@@ -24,7 +24,110 @@ for (let button of showDetailsList) {
     button.addEventListener("click", showDetails);
 }
 
+/* ----- Additional contact form validation using JavaScript ----- */
+
 const form = document.querySelector("form");
-const name = document.getElementById("name");
+const nameValue = document.getElementById("name");
+const nameError = document.getElementById("nameError");
+
 const email = document.getElementById("email");
+const emailError = document.getElementById("emailError");
+
 const message = document.getElementById("message");
+const messageError = document.getElementById("messageError");
+
+const submitButton = document.getElementById("submit");
+
+function showNameError() {
+    if (nameValue.validity.valueMissing) {
+        nameError.innerHTML = "Please give your name.";
+        
+    } else if (nameValue.validity.tooLong) {
+        nameError.innerHTML = `Name given is too long, must be at or under ${nameValue.maxLength} characters.`;
+        
+    } else if (nameValue.validity.tooShort) {
+        nameError.innerHTML = `Name given is too short, must be at least ${nameValue.minLength} characters.`;
+    }
+    
+    //console.log("Name error active");
+    nameError.className = "error active";
+}
+
+function showEmailError() {
+    if (email.validity.valueMissing) {
+        emailError.innerHTML = "Please give your email.";
+    
+    } else if (email.validity.typeMismatch) {
+        emailError.innerHTML = "Write a valid email, please. Something in the format of email@example.com, perhaps?";
+        
+    } else if (email.validity.tooLong) {
+        emailError.innerHTML = `Email is way too long, must be at or under ${email.maxLength} characters.`;
+        
+    } else if (email.validity.tooShort) {
+        emailError.innerHTML = `That's too short to be an email address, must be at least ${email.minLength} characters.`;
+    }
+    
+    emailError.className = "error active";
+}
+
+function showMessageError() {
+    if (message.validity.valueMissing) {
+        messageError.innerHTML = "Please write a message. That's what you're here for, no?";
+        
+    } else if (message.validity.tooLong) {
+        messageError.innerHTML = `This is way too long for a message, should be at at or under ${message.maxLength} characters.`;
+        
+    } else if (message.validity.tooShort) {
+        messageError.innerHTML = `Under ${message.minLength} characters? You wrote basically nothing worth my time.`;
+    }
+    
+    messageError.className = "error active";
+}
+
+function nameInputEvent(event) {
+    if (nameValue.validity.valid) {
+        nameError.innerHTML = "";
+        nameError.className = "error";
+        //console.log("Name error inactive");
+    }
+    else {
+        showNameError();
+    }
+    checkValidityForButton();
+}
+
+function emailInputEvent(event) {
+    if (email.validity.valid) {
+        emailError.innerHTML = "";
+        emailError.className = "error";
+    }
+    else {
+        showEmailError();
+    }
+    checkValidityForButton();
+}
+
+function messageInputEvent(event) {
+    if (message.validity.valid) {
+        messageError.innerHTML = "";
+        messageError.className = "error";
+    }
+    else {
+        showMessageError();
+    }
+    checkValidityForButton();
+}
+
+function checkValidityForButton() {
+    if (nameValue.validity.valid && email.validity.valid && message.validity.valid) {
+        submitButton.disabled = false;
+        //console.log("Button un-disabled");
+    } else {
+        submitButton.disabled = true;
+        //console.log("Button disabled");
+    }
+}
+
+nameValue.addEventListener("input", nameInputEvent);
+email.addEventListener("input", emailInputEvent);
+message.addEventListener("input", messageInputEvent);

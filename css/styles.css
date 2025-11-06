@@ -43,12 +43,13 @@ input[type="text"], input[type="email"], textarea {
     display:block;
     width: calc-size(fit-content, size);
     background: rgb(66, 0, 0);
-    border: 1px solid red;
+    
     border-radius: 0px 0px 4px 4px;
 }
 
 .error.active {
     padding: 0.3em 0.5em;
+    border: 1px solid red;
 }
 
 form {
@@ -64,9 +65,9 @@ input[type="text"]:hover, input[type="email"]:hover, textarea:hover {
     border-color: white;
 }
 
-input[type="text"]:not(:placeholder-shown):invalid,
-input[type="email"]:not(:placeholder-shown):invalid,
-textarea:not(:placeholder-shown):invalid {
+input[type="text"]:user-invalid,
+input[type="email"]:user-invalid,
+textarea:user-invalid {
     /*border-color: darkred;*/
     box-shadow: 0px 0px 5px red inset;
 }
@@ -119,6 +120,16 @@ footer {
     flex-wrap: wrap;
     margin: auto;
 }
+
+button:disabled, input[type="submit"]:disabled {
+    color: grey !important;
+    border-color: grey !important;
+    background-color: rgb(43, 43, 43) !important;
+    font-weight: normal !important;
+    border-width: 1px !important;
+    cursor:default !important;
+}
+
 
 .project {
     margin: 10px;
