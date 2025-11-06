@@ -29,13 +29,26 @@ input[type="text"], input[type="email"], textarea {
     color: lavender;
     border: 1px solid grey;
     border-radius: 8px;
-    margin-bottom: 1em;
     padding: 0.5em;
     
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     font-size: 16px;
     
     transition: border-color 0.1s ease-in-out;
+    display: block;
+}
+
+.error {
+    margin-bottom: 1em;
+    display:block;
+    width: calc-size(fit-content, size);
+    background: rgb(66, 0, 0);
+    border: 1px solid red;
+    border-radius: 0px 0px 4px 4px;
+}
+
+.error.active {
+    padding: 0.3em 0.5em;
 }
 
 form {
@@ -60,9 +73,9 @@ textarea:not(:placeholder-shown):invalid {
 
 textarea {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    max-width: 100%;
-    min-width: 100px;
-    min-height: 20px;
+    max-width: 96%;
+    min-width: 300px;
+    min-height: 100px;
 }
 
 a:hover {
