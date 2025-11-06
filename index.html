@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+<html lang="en">
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -39,7 +40,7 @@
 
             <section id="projects">
                 <h2>Projects</h2>
-                <p>Lorem ipsum dolor sit amet (placeholder text)</p>
+                <p>Here's a small display of some of my work.</p>
                 <div class="projectsDisplay">
                     <div class="project">
                         <img class="projectImage" src="images/tastybites.png" alt="Recipe Website Transformation">
@@ -54,9 +55,11 @@
                             <div class="extraDetails hidden">
                                 <p>This right here is what the original website used to look like:</p>
                                 <img class="projectImage" src="images/tastybites_old.png" alt="Old Recipe Website">
-                                <p>My goal was to turn this absolute horrible monstrosity into something that actually looks clean and professional using only CSS styling. No touching anything else.</p>
+                                <p>My goal was to turn this horrible looking website into something that actually looks clean and professional using only CSS styling. No touching anything else. You know, it's actually more difficult to make a website look <b>that</b> bad.</p>
                                 
-                                <button> <img src="images/mdi_github.svg"> <a target="_blank" href="https://github.com/yes-2875/recipe-website-transformation">Source Code</a></button>
+                                <a target="_blank" href="https://github.com/yes-2875/recipe-website-transformation">
+                                    <button><img src="images/mdi_github.svg">Source Code</button>
+                                </a>
                             </div>
                         </div>
                     </div>
@@ -97,7 +100,19 @@
 
             <section id="contact">
                 <h2>Contact</h2>
-                <p>Lorem ipsum dolor sit amet (placeholder text)</p>
+                <p>Want to tell me something? You can drop a message in this form:</p>
+                <form>
+                    <label for="name">Name<b>* </b>: </label>
+                    <input type="text" id="name" name="name" required><br>
+                    
+                    <label for="email">Email address<b>* </b>: </label>
+                    <input type="email" id="email" name="email" required><br>
+                    
+                    <label for="message">Your message<b>* </b>: </label><br><br>
+                    <textarea wrap="soft" id="message" name="message" required></textarea>
+                    
+                    <br><input type="submit" value="Contact Me">
+                </form>
             </section>
             
             <footer>

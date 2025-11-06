@@ -6,8 +6,10 @@ function showDetails(event) {
     
     if (detailsElement.getAttribute("class") === "extraDetails hidden") {
         detailsElement.setAttribute("class", "extraDetails");
+        btn.innerHTML = "<img src=\"images/iconoir_eye-solid.svg\"> Hide Details";
     } else {
         detailsElement.setAttribute("class", "extraDetails hidden");
+        btn.innerHTML = "<img src=\"images/iconoir_eye-solid.svg\"> Show Details";
     }
 }
 
