@@ -24,6 +24,24 @@ a {
     text-decoration: none;
 }
 
+section {
+    position: relative;
+}
+
+.logoBackground {
+    background-image: url("../images/logo2.svg");
+    background-repeat: no-repeat;
+    background-size:contain;
+    opacity: 10%;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    
+    height: 100%;
+    aspect-ratio: 1 / 1;
+}
+
 input[type="text"], input[type="email"], textarea {
     background-color: rgb(33,33,33);
     color: lavender;
