@@ -39,6 +39,7 @@ section {
     transform: translate(-50%, -50%);
     
     height: 100%;
+    max-width: 100%;
     aspect-ratio: 1 / 1;
 }
 
@@ -212,6 +213,10 @@ button img {
     top: 5px;
 }
 
+.header-text img {
+    height: 48px;
+}
+
 .projectImage {
     flex: 1 1 150px; /*Actually let the project cards expand instead of shrinking the image to oblivion. I guess I didn't understand flex well enough until now.*/
     border-radius: 10px;
@@ -233,4 +238,5 @@ button img {
         width: 100%;
         margin: 0;
     }
+    
 }
