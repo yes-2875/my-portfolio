@@ -122,14 +122,6 @@ input[type="text"], input[type="email"], textarea {
     display: block;
 }
 
-.content.light input[type="text"],
-.content.light input[type="email"],
-.content.light textarea {
-    background-color: white;
-    border: 1px solid rgb(43, 43, 43);
-    color: rgb(43, 43, 43);
-}
-
 h1 {
     margin-block-start: 12px;
     margin-block-end: 12px;
@@ -142,10 +134,6 @@ h1 {
     background: rgb(66, 0, 0);
     
     border-radius: 0px 0px 4px 4px;
-}
-
-.content.light .error {
-    background: rgb(255, 200, 200);
 }
 
 .error.active {
@@ -180,7 +168,48 @@ textarea:user-invalid {
     input[type="email"]:user-invalid,
     textarea:user-invalid {
         border-color: red;
-        box-shadow: 0px 0px 3px red inset;
+        box-shadow: 0px 0px 5px lightcoral inset;
+    }
+    
+    .error {
+        background: rgb(255, 200, 200);
+    }
+    
+    input[type="text"],
+    input[type="email"],
+    textarea {
+        background-color: white;
+        border: 1px solid rgb(43, 43, 43);
+        color: rgb(43, 43, 43);
+    }
+    
+    .projectsDisplay .project, form {
+        background-color: lavender;
+        box-shadow: 0px 0px 10px rgb(43, 43, 43), 0px 0px 10px white inset;
+        border: 1px solid rgb(43, 43, 43);
+    }
+    
+    button, input[type="submit"] {
+        background-color: lavender;
+        color: rgb(43, 43, 43);
+        border: 1px solid rgb(53,53,53);
+    }
+
+    button:hover, input[type="submit"]:hover {
+        background-color: rgb(220, 220, 240);
+    }
+
+    button:active, input[type="submit"]:active {
+        background-color: rgb(210, 210, 230);
+    }
+    
+    button img {
+        filter: invert(1);
+    }
+    
+    button:disabled, input[type="submit"]:disabled {
+        color: aliceblue !important;
+        background-color: rgb(210, 210, 230) !important;
     }
 }
 
@@ -260,12 +289,6 @@ button:disabled, input[type="submit"]:disabled {
     
 }
 
-.content.light .projectsDisplay .project, .content.light form {
-    background-color: lavender;
-    box-shadow: 0px 0px 10px rgb(43, 43, 43), 0px 0px 10px white inset;
-    border: 1px solid rgb(43, 43, 43);
-}
-
 .extraDetails {
     overflow: hidden;
     transition: all 0.5s ease-in-out;
@@ -306,20 +329,6 @@ button:active {
     background-color: rgb(93, 93, 93);
 }
 
-.content.light button, .content.light input[type="submit"] {
-    background-color: lavender;
-    color: rgb(43, 43, 43);
-    border: 1px solid rgb(53,53,53);
-}
-
-.content.light button:hover, .content.light input[type="submit"]:hover {
-    background-color: rgb(220, 220, 240);
-}
-
-.content.light button:active, .content.light input[type="submit"]:active {
-    background-color: rgb(210, 210, 230);
-}
-
 button img {
     height: 20px;
     width: 30px;
@@ -327,9 +336,7 @@ button img {
     top: 5px;
 }
 
-.content.light button img {
-    filter: invert(1);
-}
+
 
 .header-text img {
     height: 48px;
