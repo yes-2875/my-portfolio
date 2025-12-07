@@ -203,7 +203,7 @@ textarea:user-invalid {
         background-color: rgb(210, 210, 230);
     }
     
-    button img {
+    button img, footer img {
         filter: invert(1);
     }
     
@@ -334,6 +334,14 @@ button img {
     width: 30px;
     position: relative;
     top: 5px;
+}
+
+footer img {
+    width: 128px;
+    height: 128px;
+    display: block;
+    margin: 0 auto;
+    opacity: 0.6;
 }
 
 
