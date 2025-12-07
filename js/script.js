@@ -157,6 +157,24 @@ function toggleTheme() {
 
 themeToggleButton.addEventListener("click", toggleTheme);
 
+// Adjust to the user's preferred system theme
+if (window.matchMedia("(prefers-color-scheme: dark)").matches) {
+    document.body.classList.remove("light");
+    document.body.classList.remove("dark");
+    document.body.classList.add("dark");
+    contentDiv.className = "content"
+    themeToggleButton.className = "theme-toggle light";
+    
+} else {
+    console.log("User does not have dark mode on their system or prefers light mode");
+    document.body.classList.remove("light");
+    document.body.classList.remove("dark");
+    document.body.classList.add("light");
+    contentDiv.className = "content light"
+    header.className = "light"
+    themeToggleButton.className = "theme-toggle dark";
+}
+
 // Fix form submit to not refresh the page.
 function onFormSubmit(e) {
     e.preventDefault();
