@@ -3,7 +3,20 @@ html, body {
     color: lavender;
     background-color: rgb(63,63,63);
     color-scheme: dark;
+    scroll-behavior: smooth;
 }
+
+header {
+    text-align: center;
+    position: sticky;
+    top: 0;
+    z-index: 1;
+    padding-top: 0.5em;
+    padding-bottom: 1.5em;
+    
+    background: linear-gradient(rgb(53,53,53) 75%, transparent);
+}
+
 
 div.content {
     margin: auto;
@@ -117,7 +130,7 @@ hr {
     margin-bottom: 2em;
 }
 
-header, h1, h2, h3, p, footer {
+h1, h2, h3, p, footer {
     text-align: center;
 }
 
