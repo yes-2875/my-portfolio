@@ -148,7 +148,9 @@ function toggleTheme() {
         document.body.classList.add("light");
         themeToggleButton.className = "theme-toggle dark";
     }
+    
     contentDiv.classList.toggle("light");
+    header.classList.toggle("light");
     
 }
 

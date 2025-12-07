@@ -28,7 +28,11 @@ header {
 }
 
 header.light {
-    background: linear-gradient(rgb(210, 210, 210) 70%, transparent);
+    background: linear-gradient(rgb(210, 210, 230) 70%, transparent);
+}
+
+header.light > .header-text > img, .content.light > #about > .logoBackground {
+    filter: invert(1);
 }
 
 .theme-toggle {
@@ -231,6 +235,12 @@ button:disabled, input[type="submit"]:disabled {
     display: flex;
     flex-direction: column;
     
+}
+
+.content.light .projectsDisplay .project {
+    background-color: lavender;
+    box-shadow: 0px 0px 10px rgb(43, 43, 43), 0px 0px 10px white inset;
+    border: 1px solid gray;
 }
 
 .extraDetails {
