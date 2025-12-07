@@ -131,3 +131,25 @@ function checkValidityForButton() {
 nameValue.addEventListener("input", nameInputEvent);
 email.addEventListener("input", emailInputEvent);
 message.addEventListener("input", messageInputEvent);
+
+// Dark/Light Mode Toggle
+const themeToggleButton = document.querySelector(".theme-toggle");
+const contentDiv = document.querySelector(".content");
+const header = document.getElementById("startHeader");
+
+function toggleTheme() {
+    if (themeToggleButton.className == "theme-toggle dark") {
+        document.body.classList.remove("light");
+        document.body.classList.add("dark");
+        themeToggleButton.className = "theme-toggle light";
+            
+    } else if (themeToggleButton.className == "theme-toggle light") {
+        document.body.classList.remove("dark");
+        document.body.classList.add("light");
+        themeToggleButton.className = "theme-toggle dark";
+    }
+    contentDiv.classList.toggle("light");
+    
+}
+
+themeToggleButton.addEventListener("click", toggleTheme);

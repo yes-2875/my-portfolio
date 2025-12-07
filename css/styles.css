@@ -1,9 +1,19 @@
 html, body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    scroll-behavior: smooth;
+}
+
+body.dark {
     color: lavender;
     background-color: rgb(63,63,63);
     color-scheme: dark;
-    scroll-behavior: smooth;
+    
+}
+
+body.light {
+    color: rgb(43, 43, 43);
+    background-color: lavender;
+    color-scheme: light;
 }
 
 header {
@@ -15,6 +25,38 @@ header {
     padding-bottom: 1.5em;
     
     background: linear-gradient(rgb(53,53,53) 70%, transparent);
+}
+
+header.light {
+    background: linear-gradient(rgb(210, 210, 210) 70%, transparent);
+}
+
+.theme-toggle {
+    display: inline-block;
+    background-repeat: no-repeat;
+    background-size: contain;
+    
+    position: absolute;
+    opacity: 0.6;
+    top: 36px;
+    right: 10px;
+    width: 36px;
+    height: 36px;
+    
+    transition: opacity 0.1s ease-in-out;
+}
+
+.theme-toggle:hover {
+    cursor: pointer;
+    opacity: 1;
+}
+
+.theme-toggle.light {
+    background-image: url("../images/light-mode.svg");
+}
+
+.theme-toggle.dark {
+    background-image: url("../images/dark-mode.svg");
 }
 
 
@@ -30,6 +72,12 @@ div.content {
     box-shadow: 0px 0px 10px lavender, 0px 0px 20px black inset;
     border-radius: 10px;
 
+}
+
+div.content.light {
+    background-color: rgb(210, 210, 230);
+    box-shadow: 0px 0px 10px rgb(43, 43, 43), 0px 0px 20px lavender inset;
+    border: 1px solid rgb(43, 43, 43);
 }
 
 a {
