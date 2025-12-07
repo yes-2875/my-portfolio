@@ -14,7 +14,7 @@ header {
     padding-top: 0.5em;
     padding-bottom: 1.5em;
     
-    background: linear-gradient(rgb(53,53,53) 75%, transparent);
+    background: linear-gradient(rgb(53,53,53) 70%, transparent);
 }
 
 
@@ -68,6 +68,11 @@ input[type="text"], input[type="email"], textarea {
     
     transition: border-color 0.1s ease-in-out;
     display: block;
+}
+
+h1 {
+    margin-block-start: 12px;
+    margin-block-end: 12px;
 }
 
 .error {
