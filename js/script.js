@@ -132,6 +132,7 @@ nameValue.addEventListener("input", nameInputEvent);
 email.addEventListener("input", emailInputEvent);
 message.addEventListener("input", messageInputEvent);
 
+
 // Dark/Light Mode Toggle
 const themeToggleButton = document.querySelector(".theme-toggle");
 const contentDiv = document.querySelector(".content");
@@ -155,3 +156,13 @@ function toggleTheme() {
 }
 
 themeToggleButton.addEventListener("click", toggleTheme);
+
+// Fix form submit to not refresh the page.
+function onFormSubmit(e) {
+    e.preventDefault();
+    alert("Thanks for your input.");
+    form.reset();
+    submitButton.setAttribute("disabled", "");
+}
+
+form.addEventListener("submit", onFormSubmit);
