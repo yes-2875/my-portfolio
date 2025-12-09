@@ -95,7 +95,7 @@ section {
 }
 
 .logoBackground {
-    background-image: url("../images/logo2.svg");
+    background-image: url("../images/logo2.png");
     background-repeat: no-repeat;
     background-size:contain;
     opacity: 10%;
